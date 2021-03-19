@@ -9,19 +9,19 @@
 
 
 
-!()[./assets/fork.png]
+![](./assets/fork.png)
 
 ## 2. 填写你的用户名（身份证号）和密码（身份证号后六位）添加到仓库的 Secrets 中
 
-!()[./assets/secrets.gif]
+![](./assets/secrets.gif)
 
 ## 3. 开启 actions
 
-!()[./assets/open_actions.gif]
+![](./assets/open_actions.gif)
 
 ## 4. 自己提交一次 push
 
-!()[./accets/push.gif]
+![](./accets/push.gif)
 
 ## 5. 完成啦\~\~\~\~
 
