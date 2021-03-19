@@ -15,13 +15,22 @@
 
 ![](./assets/secrets.gif)
 
+请一定要保持`标题（Name）`不变！！！！！！！！
+身份证号码的 `Name` 是 `IDCODE`！！！！！
+密码的`Name`是 `PASSWORD`！！！！！
+
+***这里添加密码不会外泄你的信息！！！！！！！ ***
+
+***请放心添加！！！！！！***
+
+
 ## 3. 开启 actions
 
 ![](./assets/open_actions.gif)
 
 ## 4. 自己提交一次 push
 
-![](./accets/push.gif)
+![](./assets/push.gif)
 
 ## 5. 完成啦\~\~\~\~
 
