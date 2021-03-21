@@ -26,5 +26,6 @@ jobs:
         env:
           IDCODE: ${{ secrets.IDCODE }}
           PASSWORD: ${{ secrets.PASSWORD }}
+          SCKEY: ${{secrets.SCKEY}}
         run: |
           python3.9 ./main.py
