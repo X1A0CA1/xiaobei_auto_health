@@ -1,3 +1,15 @@
+import requests
+
+
+def server(sckey, msg):
+    if sckey is not None:
+        uri = 'https://sc.ftqq.com/{}.send?text={}'.format(sckey, msg)
+        requests.get(uri)
+        pass
+    else:
+        print('SCKEY 为空，跳过推送')
+
+
 login_url = "https://xiaobei.yinghuaonline.com/prod-api/login"
 health_url = "https://xiaobei.yinghuaonline.com/prod-api/student/health"
 
