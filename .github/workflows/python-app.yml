@@ -1,6 +1,6 @@
 # 每天10:00执行
 
-name: "xiaobei_health"
+name: "xiaobei_health_auto_run_on_10_A.M."
 
 on:
   push:
