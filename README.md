@@ -36,6 +36,16 @@
 
 ![](./assets/open_actions.gif)
 
+
+
+### 3.1 开启 Workflows
+
+**`点击 Actions`,如果你看到了类似这样的提示，请勇敢的点击 `Enable Workflow`**
+
+![](./assets/enableWF.jpg)
+
+
+
 ## 4. 自己提交一次 push
 
 ![](./assets/push.gif)
@@ -45,7 +55,7 @@
 ***脚本会在每天早上 10 点钟自动为你北温打，导员再也不用担心我的北温打\~\~\~***
 
 ## 6. 检查状态
-**你可以点击上方的 `Actions` 来查看工作流(workflows)的状态。如果提示你 Enable XXXXXXX 点击就 OK。**
+**你可以点击上方的 `Actions` 来查看工作流(workflows)的状态。自己探索下 XJB 点点就好。**
 
 
 
