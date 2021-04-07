@@ -6,6 +6,10 @@
 
 # 觉得好用的话就点个 Star？
 
+# 更新方法
+参考下面链接，感谢原作者。
+https://blog.csdn.net/qq1332479771/article/details/56087333
+
 # 使用方法
 
 ## 1. fork 本项目
