@@ -1,4 +1,4 @@
-import requests
+    import requests
 
 
 def server(sckey, msg):
@@ -12,7 +12,7 @@ def server(sckey, msg):
 
 login_url = "https://xiaobei.yinghuaonline.com/prod-api/login"
 health_url = "https://xiaobei.yinghuaonline.com/prod-api/student/health"
-
+captcha_url='https://xiaobei.yinghuaonline.com/prod-api/captchaImage'
 # 请求头
 headers = {
     "user-agent": "iPhone10,3(iOS/14.4) Uninview(Uninview/1.0.0) Weex/0.26.0 1125x2436",

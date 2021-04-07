@@ -16,13 +16,21 @@ if username == None or password == None:
 else:
     base64_password = str(base64.b64encode(bytes(password, encoding="utf-8")), encoding="utf-8")
 
-# 登录时需要 post 的 json 信息
-login_parameter = {
+
+#滑动验证
+captcha=requests.get(tools.captcha_url,headers=tools.headers,verify=False )
+json.loads(captcha.text)
+
+code=captcha['showCode']
+uuid=captcha['uuid']
+#登录时需要 post 的信息
+login_parameter={
     "username": username,
     "password": base64_password,
-    "code": "DTKA",
-    "uuid": "1e431d89bab14efcb3923bedcd5bb59f"
+    "code": code,
+    "uuid": uuid
 }
+
 if __name__ == '__main__':
     # 发送请求
     login_r = requests.post(tools.login_url, headers=tools.headers, json=login_parameter)
