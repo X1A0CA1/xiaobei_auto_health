@@ -20,8 +20,8 @@ else:
 login_parameter = {
     "username": username,
     "password": base64_password,
-    "code": "QKWA",
-    "uuid": "ca305d7a904744d2b88c0794262d01b0"
+    "code": "DTKA",
+    "uuid": "1e431d89bab14efcb3923bedcd5bb59f"
 }
 if __name__ == '__main__':
     # 发送请求
