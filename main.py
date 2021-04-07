@@ -17,13 +17,15 @@ else:
     base64_password = str(base64.b64encode(bytes(password, encoding="utf-8")), encoding="utf-8")
 
 
-#滑动验证
-captcha=requests.get(tools.captcha_url,headers=tools.headers,verify=False )
-json.loads(captcha.text)
+# 抓个话动滑动验证的包
+captcha = requests.get(tools.captcha_url, headers=tools.headers, verify=False)
+captcha = json.loads(captcha.text)
+# {'msg': '操作成功', 'img': 'xxxxxx', 'code': 200, 'showCode': '2YG2', 'uuid': '25c897f5c0ca4e79bbce43318900266b'}
+# 抓出来的值像上面这样
 
-code=captcha['showCode']
-uuid=captcha['uuid']
-#登录时需要 post 的信息
+code = captcha['showCode']
+uuid = captcha['uuid']
+# 登录时需要 post 的信息
 login_parameter={
     "username": username,
     "password": base64_password,
