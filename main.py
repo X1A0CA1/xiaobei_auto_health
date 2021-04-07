@@ -18,10 +18,11 @@ else:
 
 
 # 抓个话动滑动验证的包
-captcha = requests.get(tools.captcha_url, headers=tools.headers, verify=False)
+captcha = requests.get(tools.captcha_url, headers=tools.headers)
 captcha = json.loads(captcha.text)
 # {'msg': '操作成功', 'img': 'xxxxxx', 'code': 200, 'showCode': '2YG2', 'uuid': '25c897f5c0ca4e79bbce43318900266b'}
 # 抓出来的值像上面这样
+
 
 code = captcha['showCode']
 uuid = captcha['uuid']
