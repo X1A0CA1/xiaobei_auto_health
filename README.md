@@ -56,11 +56,19 @@ https://blog.csdn.net/qq1332479771/article/details/56087333
 
 ![](./assets/push.gif)
 
-## 5. 完成啦\~\~\~\~
+## 5. 更改 Actions 权限
+
+https://c.m.163.com/news/a/G77KT2TI0511DSSR.html
+
+根据上述报道，为了避免你的 Actions 被别人用去挖矿了，请参考下图更改 Actons 的权限。
+
+![](./assets/actions_permissions.jpg)
+
+## 6. 完成啦\~\~\~\~
 
 ***脚本会在每天早上 10 点钟自动为你北温打，导员再也不用担心我的北温打\~\~\~***
 
-## 6. 检查状态
+## 7. 检查状态
 **你可以点击上方的 `Actions` 来查看工作流(workflows)的状态。自己探索下 XJB 点点就好。**
 
 
