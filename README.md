@@ -60,7 +60,7 @@ https://blog.csdn.net/qq1332479771/article/details/56087333
 
 https://c.m.163.com/news/a/G77KT2TI0511DSSR.html
 
-根据上述报道，为了避免你的 Actions 被别人用去挖矿了，请参考下图更改 Actons 的权限。
+根据上述报道，为了避免你的 Actions 被别人用去挖矿了，请参考下图更改 Actions 的权限。
 
 ![](./assets/actions_permissions.jpg)
 
