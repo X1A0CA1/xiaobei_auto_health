@@ -5,8 +5,8 @@ name: "xiaobei_health_auto_run_on_10_A.M."
 on:
   push:
   schedule:
-    - cron: "0 2 * * *"
-    # 这里的时间为 UTC 时间，在 2 点运行，则在北京时间早上 10 点运行
+    - cron: "0 0 * * *"
+    # 这里的时间为 UTC 时间，在 0 点运行，则在北京时间早上 8 点运行
 
 jobs:
   run:
