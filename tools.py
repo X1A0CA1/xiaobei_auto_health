@@ -23,9 +23,9 @@ headers = {
 
 #  瞎几把写个西安周边的位置
 health_parameter = {
-    "temperature": "36.5",
-    "coordinates": "undefined-陕西省-西安市-高陵区",
-    "location": "109.0933452690972,34.5336865234375",
+    "temperature": "35.8",
+    "coordinates": "undefined-广东省-广州市-从化区",
+    "location": "113.59641635986328,23.539222456559607",
     "healthState": "1",
     "dangerousRegion": "2",
     "dangerousRegionRemark": "",
