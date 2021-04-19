@@ -26,5 +26,8 @@ jobs:
           IDCODE: ${{ secrets.IDCODE }}
           PASSWORD: ${{ secrets.PASSWORD }}
           SCKEY: ${{secrets.SCKEY}}
+          MYSENDER: ${{secrets.MYSENDER}}
+          MYPASS: ${{secrets.MYPASS}}
+          MYUSER: ${{secrets.MYUSER}}
         run: |
           python3.9 ./main.py
