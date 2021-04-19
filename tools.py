@@ -12,23 +12,24 @@ def server(sckey, msg):
         print('SCKEY 为空，跳过推送')
 
 def mail(mysender,mypass,myuser,msg):
-    my_sender = mysender  # 发件人账号
-    my_pass = mypass  # 发件人邮箱授权码
-    my_user = myuser  # 输入收件人账号
-    content = msg    #邮件内容
-    mail_from = 'XJun'  # input('输入发件人名称:')
-    mail_to = 'XJun'  # input('输入收件人名称:')
-    mail_subject = '这是一封由XJun编写的Python程序自动发送的邮件'  # input('输入邮箱标题:')
-    msg = MIMEText(content, 'plain', 'utf-8')
-    msg['From'] = formataddr([mail_from, my_sender])
-    msg['To'] = formataddr([mail_to, my_user])
-    msg['Subject'] = mail_subject
-
-    server = smtplib.SMTP_SSL("smtp.163.com", 994)
-    server.login(my_sender, my_pass)
-    server.sendmail(my_sender, [my_user, ], msg.as_string())
-    server.quit()
-        
+    if mysender is not None:
+        my_sender = mysender  # 发件人账号
+        my_pass = mypass  # 发件人邮箱授权码
+        my_user = myuser  # 输入收件人账号
+        content = msg    #邮件内容
+        mail_from = 'XJun'  # input('输入发件人名称:')
+        mail_to = 'XJun'  # input('输入收件人名称:')
+        mail_subject = '这是一封由XJun编写的Python程序自动发送的邮件'  # input('输入邮箱标题:')
+        msg = MIMEText(content, 'plain', 'utf-8')
+        msg['From'] = formataddr([mail_from, my_sender])
+        msg['To'] = formataddr([mail_to, my_user])
+        msg['Subject'] = mail_subject
+        server = smtplib.SMTP_SSL("smtp.163.com", 994)
+        server.login(my_sender, my_pass)
+        server.sendmail(my_sender, [my_user, ], msg.as_string())
+        server.quit()
+    else:
+        print('邮箱为空，跳过推送')
 
 login_url = "https://xiaobei.yinghuaonline.com/prod-api/login"
 health_url = "https://xiaobei.yinghuaonline.com/prod-api/student/health"
