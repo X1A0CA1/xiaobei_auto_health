@@ -10,13 +10,14 @@ def server(sckey, msg):
         pass
     else:
         print('SCKEY 为空，跳过推送')
-
-def mail(mysender,mypass,myuser,msg):
-    if mysender is not None:
-        my_sender = mysender  # 发件人账号
-        my_pass = mypass  # 发件人邮箱授权码
-        my_user = myuser  # 输入收件人账号
-        content = msg    #邮件内容
+        
+        
+def mail(my_sender, my_pass, my_user, msg):
+    if my_sender is not None:
+        my_sender = my_sender  # 发件人账号
+        my_pass = my_pass  # 发件人邮箱授权码
+        my_user = my_user  # 输入收件人账号
+        content = msg  # 邮件内容
         mail_from = 'XJun'  # input('输入发件人名称:')
         mail_to = 'XJun'  # input('输入收件人名称:')
         mail_subject = '这是一封由XJun编写的Python程序自动发送的邮件'  # input('输入邮箱标题:')
