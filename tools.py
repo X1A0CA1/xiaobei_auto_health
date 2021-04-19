@@ -21,7 +21,7 @@ headers = {
     "accept-encoding": "gzip, deflate, br"
 }
 
-#  瞎几把写个西安周边的位置
+#  写自己学校的位置
 health_parameter = {
     "temperature": "35.8",
     "coordinates": "undefined-广东省-广州市-从化区",
