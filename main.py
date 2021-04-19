@@ -7,9 +7,9 @@ import os
 username = os.environ.get('IDCODE')
 password = os.environ.get('PASSWORD')
 sckey = os.environ.get('SCKEY')
-my_sender = os.environ.get('MYSENDER')
-my_pass = os.environ.get('MYPASS')
-my_user = os.environ.get('MYUSER')
+my_sender = str(os.environ.get('MYSENDER'))
+my_pass = str(os.environ.get('MYPASS'))
+my_user = str(os.environ.get('MYUSER'))
 print(sckey,my_sender,my_pass,my_user)
 if username == None or password == None:
     # 引入 config 文件
