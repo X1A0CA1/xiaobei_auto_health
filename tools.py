@@ -46,7 +46,7 @@ headers = {
 #  写自己学校的位置
 health_parameter = {
     "temperature": "35.8",
-    "coordinates": "undefined-广东省-广州市-从化区",
+    "coordinates": "中国-广东省-广州市-从化区",
     "location": "113.59641635986328,23.539222456559607",
     "healthState": "1",
     "dangerousRegion": "2",
