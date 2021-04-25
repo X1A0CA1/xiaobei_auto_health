@@ -10,7 +10,9 @@ sckey = os.environ.get('SCKEY')
 my_sender = os.environ.get('MYSENDER')
 my_pass = os.environ.get('MYPASS')
 my_user = os.environ.get('MYUSER')
-print(sckey,my_sender,my_pass,my_user)
+
+print(tools.health_parameter)
+
 if username == None or password == None:
     # 引入 config 文件
     import config
