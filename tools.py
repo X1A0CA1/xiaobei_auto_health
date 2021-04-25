@@ -2,6 +2,7 @@ import requests
 import smtplib
 from email.mime.text import MIMEText
 from email.utils import formataddr
+import random
 
 def server(sckey, msg):
     if sckey is not None:
@@ -43,11 +44,22 @@ headers = {
     "accept-encoding": "gzip, deflate, br"
 }
 
+random_tem_x=random.randint(3, 8)
+random_tem_y=random.randint(35,36)
+random_tem=random_tem_y+random_tem_x*0.1   #体温随机
+
+location_x=113.59
+location_y=23.53
+random_x=random.randint(530128570557,641635986328)
+random_y=random.randint(6901126798316,9222456559607)
+location_x=str(location_x)+str(random_x)
+location_y=str(location_y)+str(random_y)     #地址随机            
+
 #  写自己学校的位置
 health_parameter = {
-    "temperature": "35.8",
+    "temperature": "%s" %random_tem,                #体温为35.3~36.8的随机数
     "coordinates": "中国-广东省-广州市-从化区",
-    "location": "113.59641635986328,23.539222456559607",
+    "location": "%s,%s" %(location_x,location_y),   #地址也为范围内的随机数
     "healthState": "1",
     "dangerousRegion": "2",
     "dangerousRegionRemark": "",
