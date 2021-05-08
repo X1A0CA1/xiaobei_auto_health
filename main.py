@@ -7,6 +7,11 @@ import os
 username = os.environ.get('IDCODE')
 password = os.environ.get('PASSWORD')
 sckey = os.environ.get('SCKEY')
+my_sender = os.environ.get('MYSENDER')
+my_pass = os.environ.get('MYPASS')
+my_user = os.environ.get('MYUSER')
+
+print(tools.health_parameter)
 
 if username == None or password == None:
     # 引入 config 文件
@@ -44,10 +49,12 @@ if __name__ == '__main__':
     if login_status == "用户不存在/密码错误":
         print("用户不存在或密码错误")
         tools.server(sckey, "用户不存在或密码错误")
+        tools.mail(my_sender, my_pass, my_user, "用户不存在或密码错误")
     elif login_status != "操作成功":
         print("我也不知道发生啥了，自己手动北温打吧？")
         print("返回的登录结果是：  " + login_status)
         tools.server(sckey, "北温打失败，请手动北温打")
+        tools.mail(my_sender, my_pass, my_user, "北温打失败，请手动北温打")
     else:
         # 拿到 token
         login_token = json_login_r["token"]
@@ -72,7 +79,9 @@ if __name__ == '__main__':
         if status == "操作成功":
             print("北温打完毕。")
             tools.server(sckey, "北温打完毕")
+            tools.mail(my_sender, my_pass, my_user, "北温打完毕")
         else:
             print("我也不知道啥情况，自己看输出结果 debug 下或者自己手动北温打吧？")
             print("返回的打卡结果是:   " + status)
             tools.server(sckey, "北温打失败，请手动北温打")
+            tools.mail(my_sender, my_pass, my_user, "北温打失败，请手动北温打")

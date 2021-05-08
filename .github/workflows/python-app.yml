@@ -1,4 +1,4 @@
-# 每天10:00执行
+# 每天8:00执行
 
 name: "xiaobei_health_auto_run_on_8_A.M."
 
@@ -27,5 +27,8 @@ jobs:
           IDCODE: ${{ secrets.IDCODE }}
           PASSWORD: ${{ secrets.PASSWORD }}
           SCKEY: ${{secrets.SCKEY}}
+          MYSENDER: ${{secrets.MYSENDER}}
+          MYPASS: ${{secrets.MYPASS}}
+          MYUSER: ${{secrets.MYUSER}}
         run: |
           python3.9 ./main.py
