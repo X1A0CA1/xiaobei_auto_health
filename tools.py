@@ -14,7 +14,7 @@ def server(sckey, msg):
         
         
 def mail(my_sender, my_pass, my_user, msg):
-    if my_sender is not None:
+    if my_sender and my_pass and my_user and msg is not None:
         my_sender = my_sender  # 发件人账号
         my_pass = my_pass  # 发件人邮箱授权码
         my_user = my_user  # 输入收件人账号
