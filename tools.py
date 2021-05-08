@@ -44,21 +44,21 @@ headers = {
     "accept-encoding": "gzip, deflate, br"
 }
 
-random_tem_x=random.randint(3, 8)
+random_tem_x=random.randint(3, 6)
 random_tem_y=random.randint(35,36)
 random_tem=random_tem_y+random_tem_x*0.1   #体温随机
 
-location_x=113.59
-location_y=23.53
-random_x=random.randint(530128570557,641635986328)
-random_y=random.randint(6901126798316,9222456559607)
+location_x=109.09
+location_y=34.53
+random_x=random.randint(33452690972,66905381944)
+random_y=random.randint(36865234375,73730468750)
 location_x=str(location_x)+str(random_x)
 location_y=str(location_y)+str(random_y)     #地址随机            
 
-#  写自己学校的位置
+#  xjb 写个西安周边的位置
 health_parameter = {
     "temperature": "%s" %random_tem,                #体温为35.3~36.8的随机数
-    "coordinates": "中国-广东省-广州市-从化区",
+    "coordinates": "中国-陕西省-西安市-高陵区",
     "location": "%s,%s" %(location_x,location_y),   #地址也为范围内的随机数
     "healthState": "1",
     "dangerousRegion": "2",
