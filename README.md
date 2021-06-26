@@ -1,4 +1,7 @@
-<h1 align="center">毕业了。</h1>
+<h1 align="center">毕业了。停止维护</h1>
+
+
+
 
 <h1 align="center">小北打卡助手</h1>
 
