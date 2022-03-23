@@ -1,6 +1,6 @@
 # 每天8:00执行
 
-name: "xiaobei_health_auto_run_on_8_A.M."
+name: "beiwenda"
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
     # 这里的时间为 UTC 时间，在 0 点运行，则在北京时间早上 8 点运行
 
 jobs:
-  run:
+  run-xiaobei:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,14 +22,14 @@ jobs:
         run: |
           python -m pip install requests
 
-      - name: run xiaobei
+      - name: run main.py
         env:
           IDCODE: ${{ secrets.IDCODE }}
           PASSWORD: ${{ secrets.PASSWORD }}
           LOCATION: ${{ secrets.LOCATION }}
-          SCKEY: ${{secrets.SCKEY}}
-          MYSENDER: ${{secrets.MYSENDER}}
-          MYPASS: ${{secrets.MYPASS}}
-          MYUSER: ${{secrets.MYUSER}}
+          SCKEY: ${{ secrets.SCKEY }}
+          MYSENDER: ${{ secrets.MYSENDER }}
+          MYPASS: ${{ secrets.MYPASS }}
+          MYUSER: ${{ secrets.MYUSER }}
         run: |
-          python3.9 ./main.py
+          python3.9 main.py
