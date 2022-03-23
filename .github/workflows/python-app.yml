@@ -26,6 +26,7 @@ jobs:
         env:
           IDCODE: ${{ secrets.IDCODE }}
           PASSWORD: ${{ secrets.PASSWORD }}
+          LOCATION: ${{ secrets.LOCATION }}
           SCKEY: ${{secrets.SCKEY}}
           MYSENDER: ${{secrets.MYSENDER}}
           MYPASS: ${{secrets.MYPASS}}
