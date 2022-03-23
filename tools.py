@@ -2,7 +2,6 @@ import requests
 import smtplib
 from email.mime.text import MIMEText
 from email.utils import formataddr
-import random
 
 def server(sckey, msg):
     if sckey is not None:
@@ -33,39 +32,13 @@ def mail(my_sender, my_pass, my_user, msg):
     else:
         print('邮箱为空，跳过推送')
 
-login_url = "https://xiaobei.yinghuaonline.com/prod-api/login"
-health_url = "https://xiaobei.yinghuaonline.com/prod-api/student/health"
-captcha_url='https://xiaobei.yinghuaonline.com/prod-api/captchaImage'
+login_url = "https://xiaobei.yinghuaonline.com/xiaobei-api/login"
+health_url = "https://xiaobei.yinghuaonline.com/xiaobei-api/student/health"
+captcha_url='https://xiaobei.yinghuaonline.com/xiaobei-api/captchaImage'
 # 请求头
 headers = {
     "user-agent": "iPhone10,3(iOS/14.4) Uninview(Uninview/1.0.0) Weex/0.26.0 1125x2436",
     "accept": "*/*",
     "accept-language": "zh-cn",
     "accept-encoding": "gzip, deflate, br"
-}
-
-random_tem_x=random.randint(3, 6)
-random_tem_y=random.randint(35,36)
-random_tem=random_tem_y+random_tem_x*0.1   #体温随机
-
-location_x=109.09
-location_y=34.53
-random_x=random.randint(33452690972,66905381944)
-random_y=random.randint(36865234375,73730468750)
-location_x=str(location_x)+str(random_x)
-location_y=str(location_y)+str(random_y)     #地址随机            
-
-#  xjb 写个西安周边的位置
-health_parameter = {
-    "temperature": "%s" %random_tem,                #体温为35.3~36.8的随机数
-    "coordinates": "中国-陕西省-西安市-高陵区",
-    "location": "%s,%s" %(location_x,location_y),   #地址也为范围内的随机数
-    "healthState": "1",
-    "dangerousRegion": "2",
-    "dangerousRegionRemark": "",
-    "contactSituation": "2",
-    "goOut": "1",
-    "goOutRemark": "",
-    "remark": "无",
-    "familySituation": "1"
 }
