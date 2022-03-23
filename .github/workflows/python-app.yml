@@ -6,7 +6,7 @@ on:
   push:
   schedule:
     - cron: "0 23 * * *"
-    # 这里的时间为 UTC 时间，在 0 点运行，则在北京时间早上 8 点运行
+    # 这里的时间为 UTC 时间，在 23 点运行，则在北京时间早上 7 点运行
 
 jobs:
   run-xiaobei:
