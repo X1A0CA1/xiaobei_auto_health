@@ -44,7 +44,7 @@ random_tem=random_tem_y+random_tem_x*0.1
 
 #位置随机
 
-rand = random.randint(104.464686,30.84524)
+rand = random.randint(1111,9999)
 location_x = location.split(',')[0].split('.')[0] + '.' + location.split(',')[0].split('.')[1][0:2] + str(rand)
 location_y = location.split(',')[1].split('.')[0] + '.' + location.split(',')[1].split('.')[1][0:2] + str(rand)
 
