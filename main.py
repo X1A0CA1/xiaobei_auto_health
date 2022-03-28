@@ -38,13 +38,13 @@ else:
     os._exit(0)
 
 #体温随机
-random_tem_x=random.randint(3, 6)
-random_tem_y=random.randint(35,36)
+random_tem_x=random.randint(5, 9)
+random_tem_y=36
 random_tem=random_tem_y+random_tem_x*0.1
 
 #位置随机
 
-rand = random.randint(1111, 9999)
+rand = random.randint(104.464686,30.84524)
 location_x = location.split(',')[0].split('.')[0] + '.' + location.split(',')[0].split('.')[1][0:2] + str(rand)
 location_y = location.split(',')[1].split('.')[0] + '.' + location.split(',')[1].split('.')[1][0:2] + str(rand)
 
