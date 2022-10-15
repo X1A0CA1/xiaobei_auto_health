@@ -1,4 +1,5 @@
 import requests
+import urllib3
 import tools
 import json
 import base64
@@ -25,9 +26,26 @@ else:
 bzd = location.split(',')
 location_x = str(bzd[1])
 location_y = str(bzd[0])
-reqloc = "https://api.xiaobaibk.com/api/location/?location=" + bzd[1] + "," + bzd[0]
-result = requests.get(reqloc).text
-location_r_data = json.loads(result)
+
+#reqloc = "https://api.xiaobaibk.com/api/location/?location=" + bzd[1] + "," + bzd[0]
+#result = requests.get(reqloc).text
+#location_r_data = json.loads(result)
+
+pool = urllib3.HTTPSConnectionPool(
+	"117.34.13.47",
+	assert_hostname="api.xiaobaibk.com",
+	server_hostname="api.xiaobaibk.com",
+)
+
+result = pool.urlopen(
+    "GET",
+    "/api/location/?location=" + str(bzd[1]) + "," + str(bzd[0]),
+     headers={"Host": "api.xiaobaibk.com"},
+     assert_same_host=False
+ )
+
+location_r_data = json.loads(result.data)
+
 if location_r_data['status'] == 0:
     province = location_r_data['result']['addressComponent']['province']
     city = location_r_data['result']['addressComponent']['city']
